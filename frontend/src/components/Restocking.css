@@ -1,0 +1,252 @@
+.restocking-page {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.restocking-heading,
+.restocking-history-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.restocking-heading h2,
+.restocking-panel h3 {
+  margin: 0;
+}
+
+.restocking-heading p,
+.restocking-history-heading p {
+  margin: 6px 0 0;
+  color: var(--text-muted, #77808f);
+  font-size: 13px;
+}
+
+.restocking-balance {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--border, #e3e7ed);
+  border-radius: 14px;
+  background: var(--surface, #fff);
+}
+
+.restocking-balance-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 12px;
+  background: #e8f1ff;
+  color: #2867d8;
+}
+
+.restocking-balance span,
+.restocking-balance small {
+  display: block;
+  color: var(--text-muted, #77808f);
+}
+
+.restocking-balance span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.restocking-balance strong {
+  display: block;
+  margin: 5px 0;
+  font-size: 27px;
+  line-height: 1.25;
+}
+
+.restocking-balance small {
+  font-size: 12px;
+}
+
+.restocking-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.4fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.restocking-panel {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--border, #e3e7ed);
+  border-radius: 14px;
+  background: var(--surface, #fff);
+}
+
+.restocking-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.restocking-panel form,
+.restocking-panel label {
+  display: grid;
+  gap: 8px;
+}
+
+.restocking-panel label {
+  margin-bottom: 15px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.restocking-panel input,
+.restocking-panel select,
+.restocking-panel textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid var(--border, #d9dee7);
+  border-radius: 8px;
+  background: var(--input-bg, #fff);
+  color: var(--text, #1d2735);
+  font: inherit;
+  font-size: 14px;
+}
+
+.restocking-panel textarea {
+  resize: vertical;
+}
+
+.restocking-balance-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 4px 0 16px;
+  padding: 13px;
+  border-radius: 9px;
+  background: var(--surface-muted, #f5f7fa);
+  font-size: 13px;
+}
+
+.restocking-balance-preview strong {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.restocking-panel .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.restocking-message {
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.restocking-message.error,
+.restocking-inline-error {
+  color: #b42318;
+  background: #fff0ee;
+}
+
+.restocking-message.success {
+  color: #167247;
+  background: #eaf8ef;
+}
+
+.restocking-inline-error {
+  margin: -6px 0 14px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.restocking-history-heading {
+  margin-bottom: 16px;
+}
+
+.restocking-history-heading h3 {
+  margin: 0;
+}
+
+.restocking-history-heading .button {
+  white-space: nowrap;
+}
+
+.restocking-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.restocking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.restocking-table th,
+.restocking-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border, #e6e9ef);
+  text-align: left;
+  vertical-align: top;
+}
+
+.restocking-table th {
+  color: var(--text-muted, #77808f);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.restocking-table td small {
+  display: block;
+  margin-top: 5px;
+  color: var(--text-muted, #77808f);
+  overflow-wrap: anywhere;
+}
+
+.restocking-amount {
+  color: #b42318;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.restocking-empty {
+  padding: 24px 8px;
+  color: var(--text-muted, #77808f);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .restocking-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .restocking-heading,
+  .restocking-history-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .restocking-balance {
+    padding: 16px;
+  }
+
+  .restocking-balance strong {
+    font-size: 23px;
+  }
+
+  .restocking-panel {
+    padding: 15px;
+  }
+}

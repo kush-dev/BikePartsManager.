@@ -1,0 +1,249 @@
+
+.settings-page {
+  display: grid;
+  gap: 18px;
+}
+
+.settings-section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.settings-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.settings-section-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--accent);
+}
+
+.settings-section-heading h2 {
+  margin: 0 0 5px;
+  font: 800 14px Manrope, sans-serif;
+}
+
+.settings-section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.settings-grid label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.settings-grid input:not([type="checkbox"]),
+.settings-grid select,
+.settings-grid textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.settings-grid input:focus,
+.settings-grid select:focus,
+.settings-grid textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #2563eb14;
+}
+
+.settings-grid input:disabled,
+.settings-grid select:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  background: var(--surface-2);
+}
+
+.settings-grid small {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.settings-full {
+  grid-column: 1 / -1;
+}
+
+.settings-grid textarea {
+  resize: vertical;
+}
+
+.settings-checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 10px !important;
+  cursor: pointer;
+}
+
+.settings-checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+.settings-theme-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.settings-theme-option {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+}
+
+.settings-theme-option:hover {
+  border-color: var(--accent);
+}
+
+.settings-theme-option.selected {
+  border-color: var(--accent);
+  background: var(--surface-2);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.settings-theme-option svg {
+  color: var(--accent);
+}
+
+.settings-theme-option span {
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.settings-theme-option small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.settings-information {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.settings-information div {
+  display: grid;
+  gap: 5px;
+  padding: 13px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  min-width: 0;
+}
+
+.settings-information span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.settings-information strong {
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.settings-warning {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.settings-notice {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 14px;
+  border: 1px solid #269a7040;
+  border-radius: 8px;
+  background: #269a7010;
+  color: var(--green);
+  font-size: 11px;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.settings-actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 650px) {
+  .settings-section {
+    padding: 16px;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .settings-full {
+    grid-column: auto;
+  }
+
+  .settings-information {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-actions {
+    flex-direction: column-reverse;
+  }
+
+  .settings-actions .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .settings-theme-options {
+    grid-template-columns: 1fr;
+  }
+}
