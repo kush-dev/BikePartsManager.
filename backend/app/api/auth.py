@@ -137,7 +137,7 @@ def login(
 
     response.set_cookie(
         key="bpm_session",
-        value=raw_token,
+        value=session_token,
         httponly=True,
         secure=True,
         samesite="none",
@@ -178,10 +178,11 @@ def logout(
             db.commit()
 
     response.delete_cookie(
-        key=COOKIE_NAME,
+        key="bpm_session",
         path="/",
         httponly=True,
-        secure=settings.session_cookie_secure,
+        secure=True,
+        samesite="none",
         samesite="lax",
     )
 
