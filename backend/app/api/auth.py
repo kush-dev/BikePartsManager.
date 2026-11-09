@@ -136,12 +136,12 @@ def login(
     db.commit()
 
     response.set_cookie(
-        key=COOKIE_NAME,
+        key="bpm_session",
         value=raw_token,
         max_age=settings.session_max_age,
         httponly=True,
-        secure=settings.session_cookie_secure,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         path="/",
     )
 
