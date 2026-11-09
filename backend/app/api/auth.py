@@ -183,7 +183,6 @@ def logout(
         httponly=True,
         secure=True,
         samesite="none",
-        samesite="lax",
     )
 
     return {"message": "Logged out successfully."}
