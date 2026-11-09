@@ -138,12 +138,12 @@ def login(
     response.set_cookie(
         key="bpm_session",
         value=raw_token,
-        max_age=settings.session_max_age,
         httponly=True,
         secure=True,
         samesite="none",
+        max_age=settings.session_max_age,
         path="/",
-    )
+)
 
     return {
         "message": "Login successful.",
