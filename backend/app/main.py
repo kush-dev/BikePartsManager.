@@ -80,16 +80,16 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://bikeautosparescrm.netlify.app"
+        "https://crmbikesmanager.netlify.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 # Public authentication routes
 app.include_router(auth.router)
 
