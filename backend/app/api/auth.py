@@ -136,14 +136,14 @@ def login(
     db.commit()
 
     response.set_cookie(
-        key="bpm_session",
-        value=session_token,
+        key=COOKIE_NAME,
+        value=raw_token,
         httponly=True,
         secure=True,
         samesite="none",
         max_age=settings.session_max_age,
         path="/",
-)
+    )
 
     return {
         "message": "Login successful.",
