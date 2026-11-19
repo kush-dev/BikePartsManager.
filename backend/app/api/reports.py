@@ -158,7 +158,7 @@ def financial_report(
             total_money_in += amount
             if method == "Cash":
                 cash_in += amount
-        elif kind == "OPENING_FLOAT" and method == "Cash":
+        elif kind == "OPENING_FLOAT":
             opening_float_entries.append((entry.entry_date, amount))
         local_dt = as_local(entry.created_at)
         expense_rows.append({
@@ -172,10 +172,6 @@ def financial_report(
             "local_date": entry.entry_date.isoformat() if entry.entry_date else (local_dt.date().isoformat() if local_dt else ""),
         })
 
-    # For a multi-day report, carry forward only the first recorded opening float
-    # in the selected period; subsequent daily floats are not additive cash.
-    # For a multi-day report, carry forward only the first recorded opening float
-# in the selected period; subsequent daily floats are not additive cash.
         if opening_float_entries:
             first_float_date = min(item[0] for item in opening_float_entries)
             # Include all opening floats recorded within the selected report period.
