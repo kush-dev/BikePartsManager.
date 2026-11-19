@@ -1,12 +1,9 @@
 from contextlib import asynccontextmanager
-
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text, select
 from sqlalchemy.orm import Session
-
 from pwdlib import PasswordHash
-
 from app.api import (
     auth,
     categories,
@@ -15,7 +12,6 @@ from app.api import (
     stock_movements,
     reports,
 )
-
 from app.core.config import settings
 from app.db.session import Base, engine, SessionLocal
 from app.models import (
@@ -31,8 +27,6 @@ from app.models import (
 
 
 password_hash = PasswordHash.recommended()
-
-
 def create_default_admin():
     db: Session = SessionLocal()
 

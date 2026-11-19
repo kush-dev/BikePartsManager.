@@ -315,7 +315,7 @@ export default function Dashboard({ products = [], categories = [], onNavigate }
     <div className="dashboard-page">
       <section className="page-heading dashboard-heading">
         <div>
-          <div className="eyebrow">ONROUTE BIKE SPARE PARTS</div>
+          <div className="eyebrow">CHICKEN INN SYSTEM</div>
           <h1>Business overview</h1>
           <p>Sales performance, inventory health and restocking priorities.</p>
         </div>
@@ -341,7 +341,7 @@ export default function Dashboard({ products = [], categories = [], onNavigate }
       <div className="dash-welcome">
         <div>
           <span className="dash-welcome-label">SHOP SNAPSHOT</span>
-          <h2>Onroute Bike Spare Parts</h2>
+          <h2>Chicken Inn Manager</h2>
           <p>Your daily operational overview at a glance.</p>
         </div>
         <div className="dash-welcome-icon">

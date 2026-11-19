@@ -419,7 +419,7 @@ export default function App() {
           </div>
 
           <div>
-            <strong>OnRoute Bike Spare Parts</strong>
+            <strong>CHICKEN INN STORE</strong>
             <span>MANAGER</span>
           </div>
 
@@ -436,7 +436,7 @@ export default function App() {
           <div className="shop-avatar">BP</div>
 
           <div>
-            <strong>Onroute Bike Spare Parts</strong>
+            <strong>CHICKEN INN STORE</strong>
             <span>Retail workspace</span>
           </div>
 
